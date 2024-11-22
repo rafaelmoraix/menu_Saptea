@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="/menu_Saptea/public/css/estilo_login.css">
+    <link rel="stylesheet" href="public/css/estilo_login.css">
    
 </head>
 
@@ -13,7 +13,7 @@
     <div class="main-login">
         <div class="left-login">
             <h1> Faça login <br> E entre no nosso sitema</h1>
-            <img src="/menu_Saptea/public/img/logo.svg" class="left-login-image" alt="logosap"> 
+            <img src="public/img/logo.svg" class="left-login-image" alt="logosap"> 
 
         </div>
         <div class="right-login"></div>
@@ -23,11 +23,11 @@
                 
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" name="nome" id = "nome" placeholder="Usuário">
                 </div>
                 <div class="textfield">
                     <label for="senha">senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name= "senha" id="senha" placeholder="Senha">
                 </div>
                 <button class="btn-login"  onclick="compararValor()"  >Login</button>
             </div>
@@ -49,7 +49,7 @@ function compararValor() {
     // Comparando o valor do usuário
     if (nome === "foccus" && senha === "123") { // Ajuste conforme a lógica desejada
         alert("Login bem-sucedido!");
-        window.location.href = "home.html"; // Redireciona após login correto
+        window.location.href = "F_tela_cadastros.html"; // Redireciona após login correto
     } else {
 
         alert("Usuário ou senha incorretos.");
