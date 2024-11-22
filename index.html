@@ -29,8 +29,36 @@
                     <label for="senha">senha</label>
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
-                <button class="btn-login">Login</button>
+                <button class="btn-login"  onclick="compararValor()"  >Login</button>
             </div>
     </div>
+ 
+
+<script>
+function compararValor() {
+    // Pegando os valores dos inputs
+    var nome = document.getElementById("nome").value;
+    var senha = document.getElementById("senha").value;
+
+    // Verificando se ambos os campos foram preenchidos
+    if (nome === "" || senha === "") {
+        alert("Por favor, preencha todos os campos.");
+        return; // Não faz mais nada se os campos estiverem vazios
+    }
+
+    // Comparando o valor do usuário
+    if (nome === "foccus" && senha === "123") { // Ajuste conforme a lógica desejada
+        alert("Login bem-sucedido!");
+        window.location.href = "home.html"; // Redireciona após login correto
+    } else {
+
+        alert("Usuário ou senha incorretos.");
+  
+    window.location.href = "index.html";
+    }
+}
+</script>
+ 
+
 </body>
 </html>
