@@ -1,10 +1,11 @@
 /* Estilos do arquivo estilo_login.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap');
 
 body {
     margin: 0;
-    font-family: "Noto Sans", sans-serif; /* Define a fonte padrão como "Noto Sans" */
-}  
+    font-family: "Noto Sans", sans-serif;
+}
 
 body * {
     box-sizing: border-box;
@@ -15,7 +16,7 @@ body * {
     height: 100vh;
     background-color: #201b2c;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
 }
 
@@ -28,7 +29,7 @@ body * {
     flex-direction: column;
 }
 
-.left-login > h1 { 
+.left-login>h1 {
     font-size: 3vw;
     color: #ff9900;
 }
@@ -57,22 +58,22 @@ body * {
     box-shadow: 0px 10px 40px #00000056;
 }
 
-.card-login > h1 { 
+.card-login>h1 {
     color: #ff8800;
     font-weight: 800;
     margin: 0;
 }
 
 .textfield {
-    width: 100%;  
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center; 
-    margin: 10px 0px; 
+    justify-content: center;
+    margin: 10px 0px;
 }
 
-.textfield > input {
+.textfield>input {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -85,12 +86,12 @@ body * {
     box-sizing: border-box;
 }
 
-.textfield > label {
+.textfield>label {
     color: #f0ffffde;
     margin-bottom: 10px;
 }
 
-.textfield > input::placeholder {
+.textfield>input::placeholder {
     color: #f0ffff94;
 }
 
@@ -121,10 +122,10 @@ body * {
         flex-direction: column;
     }
 
-    .left-login > h1 {
+    .left-login>h1 {
         display: none;
     }
-    
+
     .left-login {
         width: 100%;
         height: auto;
@@ -146,11 +147,14 @@ body * {
 
 /* Estilos do arquivo estilo_menu.css */
 body {
-    font-family: 'Roboto', sans-serif; /* Define a fonte padrão como "Roboto" */
-    background-color: #1a0e0da8; /* Adiciona uma cor de fundo ao body */
-    background-image: url('views/img/foccus.png'); /* Adiciona uma imagem de fundo ao body */
+    font-family: 'Roboto', sans-serif;
+    /* Define a fonte padrão como "Roboto" */
+    background-color: #1a0e0da8;
+    /* Adiciona uma cor de fundo ao body */
+    background-image: url('views/img/foccus.png');
+    /* Adiciona uma imagem de fundo ao body */
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     background-size: cover;
 }
 
@@ -160,11 +164,11 @@ body {
     top: 0;
     width: 250px;
     height: 100%;
-    background-color: #222; 
+    background-color: #222;
     color: #fff;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .sidebar ul {
@@ -184,7 +188,7 @@ body {
     text-decoration: none;
     display: inline-flex;
     border-radius: 5px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     position: relative;
 }
 
@@ -212,7 +216,7 @@ body {
 }
 
 .sidebar a i {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .sidebar .submenu a i {
@@ -232,7 +236,7 @@ body {
     background-color: white;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .sidebar a {
@@ -243,7 +247,8 @@ body {
     border-radius: 5px;
     transition: all 0.3s ease;
     position: relative;
-    transition-delay: 0.2s; /* Adiciona um delay de 0.2 segundos */
+    transition-delay: 0.2s;
+    /* Adiciona um delay de 0.2 segundos */
 }
 
 .sidebar a:hover {
@@ -267,17 +272,20 @@ body {
 
 .sidebar {
     /* ... outros estilos da sidebar ... */
-    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+    overflow-y: auto;
+    /* Adiciona a barra de rolagem vertical */
 }
 
 .submenu {
-    background-color: #333; /* Cor de fundo diferente para os submenus */
+    background-color: #333;
+    /* Cor de fundo diferente para os submenus */
 }
 
 .formulario {
-    display: none; /* Inicialmente oculto */
+    display: none;
+    /* Inicialmente oculto */
     position: fixed;
-    flex-direction: column; 
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -285,7 +293,8 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /* Garante que o formulário fique acima de outros elementos */
+    z-index: 1000;
+    /* Garante que o formulário fique acima de outros elementos */
 }
 
 .elemento {
@@ -355,4 +364,34 @@ body {
     width: 13em;
     font-size: 15px;
     height: auto;
+}
+
+/* Media queries para responsividade em telas menores */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static; /* Remove a posição fixa em telas menores */
+    }
+
+    .formulario {
+        width: 90%; /* Ajuste a largura do formulário para telas menores */
+    }
+}
+
+/* ... outros estilos (CELULAR E TABLET)... */
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .formulario {
+        width: 100%; /* Ocupa a tela inteira */
+        height: 100%; /* Ocupa a tela inteira */
+        background-color: #333; /* Fundo branco e opaco */
+        overflow-y: auto; /* Adiciona scroll se necessário */
+    }
 }

@@ -130,3 +130,18 @@ document.querySelector('#cnpj-SecEd').addEventListener('input', function(e) {
 document.querySelector('#cnpj-prefeitura').addEventListener('input', function(e) {
     e.target.value = formatarCnpj(e.target.value);
 })
+// ... outro código JavaScript (RESPONSIVIDADE FORMULARIOS) ... 
+
+const formularios = document.querySelectorAll('.formulario');
+formularios.forEach(formulario => {
+  const botaoVoltar = formulario.querySelector('.voltar-btn');
+  botaoVoltar.addEventListener('click', () => {
+    formulario.style.display = 'none';
+  });
+
+  // Verifica se a tela é de celular ou tablet
+  if (window.innerWidth <= 768) {
+    // Adiciona a classe 'mobile' ao formulário
+    formulario.classList.add('mobile');
+  }
+});
