@@ -17,11 +17,18 @@ menuItems.forEach(item => {
             formulario.style.display = 'block'; 
         });
     }
+
+    
 });
 
 //funcao do botao fechar do cadastro de orgaos
 document.querySelector('#fecharOrgao').addEventListener('click', function(){
     document.querySelector('#formulario-cad-orgao').style.display = 'none'
+})
+
+//funcao do botao fechar do cadastro de instituicao
+document.querySelector('#fecharIntituicao').addEventListener('click', function(){
+    document.querySelector('#formulario-cad-instituicao').style.display = 'none'
 })
 
 //funcao do botao fechar do cadastro de escola
@@ -33,6 +40,7 @@ document.querySelector('#fecharEscola').addEventListener('click', function(){
 document.querySelector('#fecharAlunos').addEventListener('click', function(){
     document.querySelector('#formulario-cad-aluno').style.display = 'none'
 })
+
 
 function formatarTelef(telefone) {
     let validtel = telefone.replace(/\D/g, "").substring(0, 11);
